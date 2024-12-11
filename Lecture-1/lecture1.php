@@ -70,7 +70,24 @@ if ($x < 10) {
     echo "the $x > 10 is true";
 }
 
+$fav = "red";
 
+switch ($fav) {
+    case "red": 
+        echo "fav: is red";
+        break;
+    
+    case "blue": 
+        echo "fav: is blue";
+        break;
+                    
+    case "green": 
+        echo "fav: is green";
+        break;
+    
+    default: 
+        echo "fav: is neither red, blue, nor greeen";   
+}
 ?>
 
 </body>
@@ -160,6 +177,21 @@ if... elseif... else...
         // code to be executed if first condition is false and this condition is true;
     } else {
         // code to be executed if all conditions are false;
+    }
+
+switch 
+    switch (expression) {
+        case label1:
+            //code block
+            break;
+        case label2:
+            //code block;
+            break;
+        case label3:
+            //code block
+            break;
+        default:
+            //code block
     }
 -->
 
