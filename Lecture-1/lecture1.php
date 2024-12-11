@@ -51,6 +51,12 @@ $int_cat= (string)$x;
 echo var_dump($int_cat);
 
 echo rand(1, 100);
+
+define("COFFEE", "BLACK");
+echo COFFEE;
+
+const TEA = "GREEN_TEA";
+echo TEA;
 ?>
 
 </body>
@@ -71,35 +77,39 @@ var_dump(): You can get the data type of any object by using the var_dump() func
 
 
 *** String
-strlen(): The PHP strlen() function returns the length of a string.
-str_word_count(): The PHP str_word_count() function counts the number of words in a string.
-strpos(): The PHP strpos() function searches for a specific text within a string.
-strtoupper(): The strtoupper() function returns the string in upper case:
-strtolower(): The strtolower() function returns the string in lower case:
-str_replace(): The PHP str_replace() function replaces some characters with some other characters in a string.
-strrev(): The PHP strrev() function reverses a string.
-trim(): The trim() removes any whitespace from the beginning or the end:
-substr():  can return a range of characters by using the substr() function.
+    strlen(): The PHP strlen() function returns the length of a string.
+    str_word_count(): The PHP str_word_count() function counts the number of words in a string.
+    strpos(): The PHP strpos() function searches for a specific text within a string.
+    strtoupper(): The strtoupper() function returns the string in upper case:
+    strtolower(): The strtolower() function returns the string in lower case:
+    str_replace(): The PHP str_replace() function replaces some characters with some other characters in a string.
+    strrev(): The PHP strrev() function reverses a string.
+    trim(): The trim() removes any whitespace from the beginning or the end:
+    substr():  can return a range of characters by using the substr() function.
 
 boolean: 
-var_dump(is_float($x))
-var_dump(is_int($x))
-var_dump(is_numeric($x))
+    var_dump(is_float($x))
+    var_dump(is_int($x))
+    var_dump(is_numeric($x))
 
 Cast:
-(string) - Converts to data type String
-(int) - Converts to data type Integer
-(float) - Converts to data type Float
-(bool) - Converts to data type Boolean
-(array) - Converts to data type Arra
+    (string) - Converts to data type String
+    (int) - Converts to data type Integer
+    (float) - Converts to data type Float
+    (bool) - Converts to data type Boolean
+    (array) - Converts to data type Arra
 
 Math: 
-pi(): 3.14
-min(1,2,3,4,5)
-max(1,2,3,4,5)
-sqrt(4)
-round()
-rand()
-rand(1)
-rand(1, 100)
+    pi(): 3.14
+    min(1,2,3,4,5)
+    max(1,2,3,4,5)
+    sqrt(4)
+    round()
+    rand()
+    rand(1)
+    rand(1, 100)
+
+Const: (no $ sign before the constant name)
+    define(name, value);
+    const name = "value";
 -->
