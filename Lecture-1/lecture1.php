@@ -57,6 +57,20 @@ echo COFFEE;
 
 const TEA = "GREEN_TEA";
 echo TEA;
+
+$x = 100;
+$y = "100";
+var_dump($x <=> $y);
+
+if ($x < 10) {
+    echo "The $x < 10 is true";
+} elseif ($x == 10) {
+    echo "The $x == 10 is true";
+} else {
+    echo "the $x > 10 is true";
+}
+
+
 ?>
 
 </body>
@@ -112,4 +126,41 @@ Math:
 Const: (no $ sign before the constant name)
     define(name, value);
     const name = "value";
+
+
+Operators: 
+    ==  Returns true if $x is equal to $y
+    === Returns true if $x is equal to $y, and they are of the same type
+    !=  Returns true if $x is not equal to $y
+    <>  Returns true if $x is not equal to $y
+    !== Returns true if $x is not equal to $y, or they are not of the same type
+    >   Returns true if $x is greater than $y
+    <   Returns true if $x is less than $y
+    >=  Returns true if $x is greater than or equal to $y
+    <=  Returns true if $x is less than or equal to $y
+    <=> Returns an integer less than, equal to, or greater than zero, depending on if $x is less than, equal to, or greater than $y. Introduced in PHP 7.
+
+
+x = 5 
+y = 10
+var_dump(x<=>y)  = -1
+
+x = 5 
+y = 5
+var_dump(x<=>y)  = 0
+
+x = 50 
+y = 10
+var_dump(x<=>y)  = 1
+
+if... elseif... else...
+    if (condition) {
+        code to be executed if this condition is true;
+    } elseif (condition) {
+        // code to be executed if first condition is false and this condition is true;
+    } else {
+        // code to be executed if all conditions are false;
+    }
 -->
+
+
