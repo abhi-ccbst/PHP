@@ -88,6 +88,26 @@ switch ($fav) {
     default: 
         echo "fav: is neither red, blue, nor greeen";   
 }
+
+$x = 1;
+while($x < 6) {
+    if ($x==4) {
+        break;
+    }
+    echo "<br>The value of X: $x";
+    $x++;
+}
+
+do {
+    echo "<br>do while: The value of X: $x";
+} while($x < 0);
+
+for ($z=0; $z < 5; $z++) {
+    if ($z == 3) {
+        continue;
+    }
+    echo "<br>for: The value of Z: $z";
+}
 ?>
 
 </body>
@@ -193,6 +213,31 @@ switch
         default:
             //code block
     }
+
+Loop:
+    while: 
+        $i = 1;
+        while ($i < 6) {
+            echo $i;
+            $i++;
+        }
+    
+    do while: 
+        $i = 1;
+        do {
+            echo $i;
+            $i++;
+        } while ($i < 6);
+    
+    for:
+        for ($x = 0; $x <= 10; $x++) {
+            echo "The number is: $x <br>";
+        }
+break: The break statement can be used to jump out of different kind of loops.
+
+continue: The continue statement can be used to jump out of the current iteration of a loop, and continue with the next.
+
+
 -->
 
 
