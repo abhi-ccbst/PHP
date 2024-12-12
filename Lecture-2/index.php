@@ -23,14 +23,22 @@ $test[1] = "One";
 $test[3] = "three";
 array_push($test, 1,2,3);
 echo "<br>" . var_dump($test);
-
+function goodMorning($firstName) {
+    echo "<br>Good moring: $firstName";
+}
 $drink = array(
     "tea" => "Green Tea",
     1 => "pop drink",
-    "coffee" => "black coffee"
+    "coffee" => "black coffee",
+    2 => "goodMorning"
 );
 echo "<br>" . var_dump($drink);
 echo $drink["tea"];
+$drink[2]("Abhi");
+
+foreach ($drink as $index => $dri) {
+    echo "<br> value is $dri at index: $index";
+}
 ?>
 
 </body>
