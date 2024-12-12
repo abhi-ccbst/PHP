@@ -22,7 +22,15 @@ echo "<br>" . var_dump($names);
 $test[1] = "One";
 $test[3] = "three";
 array_push($test, 1,2,3);
-var_dump($test);
+echo "<br>" . var_dump($test);
+
+$drink = array(
+    "tea" => "Green Tea",
+    1 => "pop drink",
+    "coffee" => "black coffee"
+);
+echo "<br>" . var_dump($drink);
+echo $drink["tea"];
 ?>
 
 </body>
@@ -40,4 +48,31 @@ foreach
 
 func: array_push
     you use the array_push() function to add a new item
+
+Create an Array: 
+    option: 1
+        $test = array("Abhi", "john", "mohamad");
+    option 2: 
+        $test = ["Abhi", "john", "mohamad"];    
+
+
+    indexing: 
+        Default
+            $test = [
+                    0 => "Abhi",
+                    1 => "john",
+                    2 => "mohamad"
+                ]        
+        change
+            $test = [
+                    "test1" => "Abhi",
+                    1 => "john",
+                    "test2" => "mohamad"
+                ]        
+           $test = array(
+                    "test1" => "Abhi",
+                    1 => "john",
+                    "test2" => "mohamad"
+                );
+            echo $test["test1"];     
 -->
