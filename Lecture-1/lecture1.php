@@ -108,6 +108,33 @@ for ($z=0; $z < 5; $z++) {
     }
     echo "<br>for: The value of Z: $z";
 }
+$nameFirst = "Abhi";
+
+echo "<br>without ref " . morningMessage($nameFirst);
+echo "<br> $nameFirst";
+
+echo "<br>without ref " . morningMessageRef($nameFirst);
+echo "<br> $nameFirst";
+echo "<br>Sum of 1,2,3,4,5 is " . sum(1,2,3,4,5);
+
+function morningMessage($name) {
+    $name = "john";
+    return "Good Moring: $name";
+}
+
+function morningMessageRef(&$name) {
+    $name = "john";
+    return "Good Moring with ref: $name";
+}
+
+function sum(...$xum) {
+    $len = count($xum);
+    $sumOfX = 0;
+    for ($i = 0; $i < $len; $i++) {
+         $sumOfX += $xum[$i];
+    }
+    return $sumOfX;
+}
 ?>
 
 </body>
@@ -237,7 +264,36 @@ break: The break statement can be used to jump out of different kind of loops.
 
 continue: The continue statement can be used to jump out of the current iteration of a loop, and continue with the next.
 
+function: 
+    function myMessage() {
+        echo "Hello world!";
+    }
 
+    function myMessage($test) {
+        echo "Hello world! $test";
+    }
+
+    function myMessage($test) {
+        return "Hello world! $test";
+    }
+    reference:    To turn a function argument into a reference, the & operator is used
+
+    Variable Number of Arguments
+        function sum(...$x) {
+            //code
+        }
+        function sum ($y, ...$x) {
+            //code
+        }
+
+        wrong
+            function sum(...$x, $y) {
+                code
+            }
+        wrong
+            function sum(...$x, ...$y) {
+                //code
+            }
 -->
 
 
