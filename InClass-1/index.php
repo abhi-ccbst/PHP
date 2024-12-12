@@ -38,7 +38,7 @@ function multi(...$xum) {
 }
 
 function sub(...$xum) {
-    $sumOfX = 1;
+    $sumOfX = 0;
     for ($i = 0; $i < count($xum); $i++) {
         if ($i == 0) {
             $sumOfX = $xum[$i];
