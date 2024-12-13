@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    Name: <input type="text" name="fname">
+    <input type="submit">
+</form>
+
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //Collect data from input field
+    $name = htmlspecialchars($_REQUEST['fname']);
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo "Good Morning $name";
+    }
+}
+
 $x = 100;
 function printX() {
     // echo $x;
@@ -32,7 +47,8 @@ printServer();
 Superglobals
     1. $GLOBALS: Global variables are variables that can be accessed from any scope. 
     2. _SERVER
-    3. _REQUEST
+    3. _REQUEST $_REQUEST is a PHP super global variable which contains submitted form data, and all cookie data.
+                In other words, $_REQUEST is an array containing data from $_GET, $_POST, and $_COOKIE.
     4. _POST
     5. _GET
 
