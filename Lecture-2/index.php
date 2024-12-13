@@ -50,6 +50,59 @@ unset($x);
 $x = "unset_without";
 echo "<br>" . var_dump($drinks);
 
+
+$drinks = ["green-tea", "black-coffee", "pop-drinks"];
+array_splice($drinks, 0, 1);
+var_dump($drinks);
+
+$drinks = ["green-tea", "black-coffee", "pop-drinks"];
+unset($drinks[1]);
+var_dump($drinks);
+
+$num = [10, 5, 100];
+sort($num); 
+$clength = count($num);
+echo "<br>sort()";
+for($x = 0; $x < $clength; $x++) {
+    echo "<br>";
+    echo $num[$x];
+}
+rsort($num);
+$clength = count($num);
+echo "<br>rsort()";
+for($x = 0; $x < $clength; $x++) {
+    echo "<br>";
+    echo $num[$x];
+}
+
+$num = [3 => 10, 7 => 5, 9 => 100];
+asort($num);
+echo "<br>asort()";
+foreach($num as $ind => $val) {
+    echo "<br>Key: " . $ind . " val: " . $val;
+}
+
+$num = [3 => 10, 7 => 5, 9 => 100];
+arsort($num);
+echo "<br>arsort()";
+foreach($num as $ind => $val) {
+    echo "<br>Key: " . $ind . " val: " . $val;
+}
+
+$num = [3 => 10, 7 => 5, 9 => 100];
+ksort($num);
+echo "<br>ksort()";
+foreach($num as $ind => $val) {
+    echo "<br>Key: " . $ind . " val: " . $val;
+}
+
+$num = [3 => 10, 7 => 5, 9 => 100];
+krsort($num);
+echo "<br>krsort()";
+foreach($num as $ind => $val) {
+    echo "<br>Key: " . $ind . " val: " . $val;
+}
+
 ?>
 
 
@@ -102,4 +155,29 @@ Create an Array:
                     "test2" => "mohamad"
                 );
             echo $test["test1"];     
+
+
+add: 
+$names = ["Abhi", "john"];
+Option: 
+    array_push($names, 1,2,3);
+    $names[] = 1;
+    $names["test"] = "test";
+    $names += [3,2,1];
+    
+removing an iteam from array
+option: 
+
+    1. array_splice($names, 1, 2);  array(1,2,3)  => array(1);
+    2. unset($names[2]);
+
+sort():
+    
+    sort() - sort arrays in ascending order
+    rsort() - sort arrays in descending order
+    asort() - sort associative arrays in ascending order, according to the value
+    ksort() - sort associative arrays in ascending order, according to the key
+    arsort() - sort associative arrays in descending order, according to the value
+    krsort() - sort associative arrays in descending order, according to the key
 -->
+    
