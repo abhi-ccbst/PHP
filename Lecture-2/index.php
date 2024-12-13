@@ -39,7 +39,20 @@ $drink[2]("Abhi");
 foreach ($drink as $index => $dri) {
     echo "<br> value is $dri at index: $index";
 }
+
+$drinks = ["green-tea", "black-coffee", "pop-drinks"];
+echo "<br>" . var_dump($drinks);
+
+foreach ($drinks as &$x) {
+    $x = "soda";
+}
+unset($x);
+$x = "unset_without";
+echo "<br>" . var_dump($drinks);
+
 ?>
+
+
 
 </body>
 </html>
@@ -53,7 +66,13 @@ foreach
     foreach ($test as $x) {
         echo  $x;
     }
-
+    reference:
+        $car = ["ford", "honda"]
+        foreach ($cars as &$x) {
+            $x = "Ford";
+        }
+        unset($x);  //Without the unset($x) function, the $x variable will remain as a reference to the last array item.
+        var_dump($cars);
 func: array_push
     you use the array_push() function to add a new item
 
