@@ -2,10 +2,41 @@
 <html>
 <body>
 <form method="post" action="welcome.php">
-    <!-- action="<?php echo $_SERVER['PHP_SELF'];?>"> -->
-    Name: <input type="text" name="fname">
-    Email: <input type="email" name="femail" require="true">
-    <input type="submit">
+    <label for="fname">First Name (Required):</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+
+    <label for="femail">Email (Required):</label>
+    <input type="email" id="femail" name="femail" required><br><br>
+
+    <label for="password">Password (Required):</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label><br><br>
+
+    <label for="hobbies">Hobbies:</label><br>
+    <input type="checkbox" id="reading" name="hobbies[]" value="Reading">
+    <label for="reading">Reading</label><br>
+    <input type="checkbox" id="traveling" name="hobbies[]" value="Traveling">
+    <label for="traveling">Traveling</label><br>
+    <input type="checkbox" id="sports" name="hobbies[]" value="Sports">
+    <label for="sports">Sports</label><br><br>
+
+    <label for="bio">Short Bio:</label><br>
+    <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+
+    <button type="submit">Submit</button>
 </form>
 
 <?php 
