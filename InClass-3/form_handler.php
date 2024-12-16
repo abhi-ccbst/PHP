@@ -7,10 +7,6 @@
             foreach ($_POST as $key => $value) {
                 echo "<li><strong>$key:</strong> " . htmlspecialchars($value) . "</li>";
             }
-
-            if (!empty($_FILES["file"]["name"])) {
-                echo "<li><strong>Uploaded File:</strong> " . htmlspecialchars($_FILES["file"]["name"]) . "</li>";
-            }
         } else {
             echo "<p>No data submitted!</p>";
         }
