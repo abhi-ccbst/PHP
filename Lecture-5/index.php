@@ -23,8 +23,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (in_array('Division', $operations)) {
         $results[] = ($number2 != 0) ? "Division: " . ($number1 / $number2) : "Division: Cannot divide by zero";
     }
-    $readFile = readfile('fileRead.txt');
-    echo $readFile;
+    // $readFile = readfile('fileRead.txt');
+    // echo $readFile;
+
+    $myFile = fopen("fileRead.txt","r");
+    // echo fread($myFile, filesize("fileRead.txt"));
+    while (!feof($myFile)) {
+        echo fgets($myFile) . "<br>";
+        // echo fgetc($myFile) . "<br>";
+
+    }
+    
+    fclose($myFile);
 }
 ?>
 
@@ -90,5 +100,22 @@ The include and require statements are identical, except upon failure:
 
 File Management: 
     readfile(location): The readfile() function is useful if all you want to do is open up a file and read its contents.
-                        
+
+    fopen(): it give more eoption then readfile()
+    fread(): The fread() function reads from an open file.
+    fgets(): The fgets() function is used to read a single line from a file.
+    fgetc(): The fgetc() function is used to read a single character from a file.
+    feof(): The feof() function checks if the "end-of-file" (EOF) has been reached.
+
+
+Modes	Description
+r	Open a file for read only. File pointer starts at the beginning of the file
+w	Open a file for write only. Erases the contents of the file or creates a new file if it doesn't exist. File pointer starts at the beginning of the file
+a	Open a file for write only. The existing data in file is preserved. File pointer starts at the end of the file. Creates a new file if the file doesn't exist
+x	Creates a new file for write only. Returns FALSE and an error if file already exists
+r+	Open a file for read/write. File pointer starts at the beginning of the file
+w+	Open a file for read/write. Erases the contents of the file or creates a new file if it doesn't exist. File pointer starts at the beginning of the file
+a+	Open a file for read/write. The existing data in file is preserved. File pointer starts at the end of the file. Creates a new file if the file doesn't exist
+x+	Creates a new file for read/write. Returns FALSE and an error if file already exists
+
 -->
