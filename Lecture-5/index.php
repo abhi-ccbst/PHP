@@ -23,6 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (in_array('Division', $operations)) {
         $results[] = ($number2 != 0) ? "Division: " . ($number1 / $number2) : "Division: Cannot divide by zero";
     }
+    $readFile = readfile('fileRead.txt');
+    echo $readFile;
 }
 ?>
 
@@ -82,5 +84,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 The include (or require) statement takes all the text/code/markup that exists in the specified file and copies it into the file that uses the include statement. 
 The include and require statements are identical, except upon failure:
     * require will produce a fatal error (E_COMPILE_ERROR) and stop the script
-    * include will only produce a warning (E_WARNING) and the script will continu
+    * include will only produce a warning (E_WARNING) and the script will continue
+
+
+
+File Management: 
+    readfile(location): The readfile() function is useful if all you want to do is open up a file and read its contents.
+                        
 -->
