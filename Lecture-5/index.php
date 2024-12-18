@@ -26,15 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // $readFile = readfile('fileRead.txt');
     // echo $readFile;
 
-    $myFile = fopen("fileRead.txt","r");
-    // echo fread($myFile, filesize("fileRead.txt"));
-    while (!feof($myFile)) {
-        echo fgets($myFile) . "<br>";
-        // echo fgetc($myFile) . "<br>";
-
-    }
-    
+    // $myFile = fopen("fileRead.txt","r");
+    $myFile = fopen("fileRead.txt", "a");
+    $txt = "Hello, My name is Abhi";
+    fwrite($myFile, $txt);
     fclose($myFile);
+    // while (!feof($myFile)) {
+    //     echo fgets($myFile) . "<br>";
+    //     // echo fgetc($myFile) . "<br>";
+
+    // }
 }
 ?>
 
@@ -106,6 +107,7 @@ File Management:
     fgets(): The fgets() function is used to read a single line from a file.
     fgetc(): The fgetc() function is used to read a single character from a file.
     feof(): The feof() function checks if the "end-of-file" (EOF) has been reached.
+    fwrite(): The fwrite() function is used to write to a file.
 
 
 Modes	Description
