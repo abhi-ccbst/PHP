@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $content .= "\n\n--- Processed by Backend ---\nUpdated by: Abhi ";
         file_put_contents($processedFilePath, $content);
 
-        // Reidrect to review page
+        // Redirect to review page
         header("Location: review.php?file=" . urlencode($fileName));
         exit;
     } else {
