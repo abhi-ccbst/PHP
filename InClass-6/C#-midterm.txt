@@ -1,0 +1,411 @@
+Which of the following is the correct way to declare a variable in C#?
+A. int 1number;
+B. int number;
+C. int number = 10.5;
+D. double number;
+ANSWER: B
+
+What will be the output of the following code?
+csharp
+Copy code
+int x = 5;
+Console.WriteLine(x++);
+A. 5
+B. 6
+C. Compilation error
+D. 0
+ANSWER: A
+
+Which of the following is a valid comment in C#?
+A. '//' This is a single line comment
+B. # This is a comment
+C. '/*' This is a comment
+D. %% This is a comment
+ANSWER: A
+
+Which data type is used to store a single character in C#?
+A. string
+B. char
+C. int
+D. bool
+ANSWER: B
+
+What is the default value of an uninitialized int variable in C#?
+A. 0
+B. null
+C. Undefined
+D. NaN
+ANSWER: A
+
+Which of the following will convert a double value to an int in C#?
+A. int x = (int) 3.5;
+B. int x = 3.5;
+C. int x = 3.0;
+D. int x = Convert.ToInt32(3.5);
+ANSWER: A
+
+What is the result of the following expression in C#?
+csharp
+Copy code
+int a = 5;
+int b = 2;
+double result = a / b;
+Console.WriteLine(result);
+A. 2
+B. 2.5
+C. 2.0
+D. Error
+ANSWER: A
+
+8. How do you read user input as a string in C#?
+A. string input = Console.ReadLine();
+B. input = Console.Read();
+C. string input = Console.GetLine();
+D. input = Console.ReadString();
+ANSWER: A
+
+Which operator is used for modulus (remainder) in C#?
+A. %
+B. &
+C. //
+D. *
+ANSWER: A
+
+Which of the following is used to compare two values for equality in C#?
+A. ==
+B. =
+C. !=
+D. <>
+ANSWER: A
+
+What is the output of the following C# code?
+csharp
+Copy code
+int x = 10;
+if (x > 5)
+{
+    Console.WriteLine("Greater than 5");
+}
+else
+{
+    Console.WriteLine("Less than or equal to 5");
+}
+A. Greater than 5
+B. Less than or equal to 5
+C. Compilation error
+D. No output
+ANSWER: A
+
+What does the switch statement do in C#?
+A. Executes code based on matching a value
+B. Loops through code multiple times
+C. Changes the flow based on boolean condition
+D. Compares two values
+ANSWER: A
+
+Which of the following is a correct while loop in C#?
+A. while (x > 0) { x--; }
+B. while x > 0 { x--; }
+C. while (x > 0) x--
+D. while { x-- }
+ANSWER: A
+
+What does the continue statement do inside a loop in C#?
+A. Breaks the loop
+B. Skips the current iteration and continues to the next one
+C. Stops the program execution
+D. Ends the current method
+ANSWER: B
+
+15. How would you initialize a one-dimensional array of integers with 5 elements in C#?
+A. int[] arr = new int[5];
+B. int[] arr = new int[5] {1, 2, 3, 4, 5};
+C. int arr[] = {1, 2, 3, 4, 5};
+D. int[] arr = {1, 2, 3, 4, 5};
+ANSWER: A
+
+What is method overloading in C#?
+A. Defining multiple methods with the same name and the same parameters
+B. Defining multiple methods with the same name and different return types
+C. Defining multiple methods with the same name and different parameters
+D. Defining a method that is automatically executed when the program starts
+ANSWER: C
+
+Which of the following correctly defines a method in C# that takes two integers and returns their sum?
+A. public int Add(int a, int b) { return a + b; }
+B. public void Add(int a, int b) { return a + b; }
+C. public Add(int a, int b) { return a + b; }
+D. int Add(int a, int b) { return a + b; }
+ANSWER: A
+
+what is a constructor?
+A. A method that initializes a new object of a class
+B. A method used to destroy an object
+C. A type of data field
+D. A variable used to store class data
+ANSWER: A
+
+Which access modifier in C# allows access to class members from anywhere within the same assembly and from other assemblies?
+A. public
+B. private
+C. protected
+D. internal
+ANSWER: A
+
+Which of the following is an example of polymorphism in C#?
+A. A base class reference pointing to a derived class object
+B. A class that cannot be inherited
+C. A method that does not return any value
+D. A class that cannot contain methods
+ANSWER: A
+
+What is inheritance in C#?
+A. The ability to define classes based on other classes
+B. A way to define methods
+C. The process of writing code to initialize variables
+D. A method of organizing data inside arrays
+ANSWER: A
+
+What is abstraction in C#?
+A. Hiding the implementation details of a class and showing only the functionality
+B. Inheriting properties from another class
+C. The ability to overload methods
+D. Using interfaces to define class behavior
+ANSWER: A
+
+Which of the following is an example of an interface in C#?
+A. public interface IAnimal { void MakeSound(); }
+B. public class IAnimal { void MakeSound(); }
+C. public void IAnimal() { }
+D. public abstract class IAnimal { void MakeSound(); }
+ANSWER: A
+
+Which of the following will create an array of 10 integers in C#?
+A. int[] arr = new int(10);
+B. int[] arr = new int[10];
+C. int arr = new int[10];
+D. int[] arr = {10};
+ANSWER: B
+
+What is the output of the following code?
+csharp
+Copy code
+int x = 4;
+Console.WriteLine(++x);
+A. 3
+B. 4
+C. 5
+D. Compilation error
+ANSWER: C
+
+What is the result of the following expression in C#?
+csharp
+Copy code
+int a = 10;
+int b = 3;
+double result = a / (double)b;
+Console.WriteLine(result);
+A. 3.33
+B. 3
+C. 3.0
+D. Error
+ANSWER: A
+
+Which of the following is NOT a valid way to declare a constant in C#?
+A. const int x = 10;
+B. readonly int x = 10;
+C. const double PI = 3.14;
+D. readonly double PI = 3.14;
+ANSWER: Bconstants)
+
+Which of the following is the correct way to declare and initialize a string in C#?
+A. string str = "Hello";
+B. string str = 'Hello';
+C. str = "Hello";
+D. string str = new string("Hello");
+ANSWER: A
+
+What will be the output of the following C# code?
+csharp
+Copy code
+bool result = 5 > 3;
+Console.WriteLine(result);
+A. True
+B. False
+C. 5 > 3
+D. Error
+ANSWER: A
+
+What is the correct way to declare a boolean variable in C#?
+A. bool flag = 0;
+B. boolean flag = true;
+C. bool flag = true;
+D. boolean flag = true;
+ANSWER: C
+
+What is the result of the following switch statement?
+csharp
+Copy code
+int day = 3;
+switch (day)
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednesday");
+        break;
+    default:
+        Console.WriteLine("Invalid day");
+}
+A. Monday
+B. Tuesday
+C. Wednesday
+D. Invalid day
+ANSWER: C
+
+Which of the following is the correct way to create a for loop in C#?
+A. for(int i = 0; i < 10; i++) { Console.WriteLine(i); }
+B. for i = 0 to 10 { Console.WriteLine(i); }
+C. for(int i = 0; i < 10; ++i) { Console.WriteLine(i); }
+D. Both A and C are correct
+ANSWER: D
+
+Which of the following is a valid array initialization in C#?
+A. int[] arr = new int[] {1, 2, 3};
+B. int[] arr = {1, 2, 3};
+C. int arr = [1, 2, 3];
+D. Both A and B
+ANSWER: D
+
+Which of the following statements will create a two-dimensional array in C#?
+A. int[,] arr = new int[2, 3];
+B. int[2, 3] arr = new int[];
+C. int[] arr = new int[2, 3];
+D. int arr = new int[2, 3];
+ANSWER: A
+
+What will the following C# code output?
+csharp
+Copy code
+string s1 = "Hello";
+string s2 = "world";
+Console.WriteLine(s1 + " " + s2);
+A. Hello world
+B. HelloWorld
+C. world Hello
+D. Compilation Error
+ANSWER: A
+
+what does void represent in a method?
+A. A return type that signifies no return value
+B. A method that cannot be executed
+C. A type of data structure
+D. A method that returns an integer
+ANSWER: A
+
+Which of the following is the correct way to handle exceptions in C#?
+A. try { } catch (Exception e) { }
+B. try { } finally { }
+C. catch (Exception e) { }
+D. All of the above
+ANSWER: D
+
+What will be the output of the following code?
+csharp
+Copy code
+int x = 5;
+int y = 2;
+Console.WriteLine(x % y);
+A. 1
+B. 2
+C. 0
+D. 5
+ANSWER: A
+
+Which of the following is used to call a base class constructor in C#?
+A. base()
+B. super()
+C. parent()
+D. this()
+ANSWER: A
+
+What is the default value of a bool in C#?
+A. false
+B. true
+C. 0
+D. null
+ANSWER: A
+
+Which of the following is an example of using a foreach loop in C#?
+A. foreach(int i in arr) { Console.WriteLine(i); }
+B. foreach(i in arr) { Console.WriteLine(i); }
+C. foreach(int i { arr }) { Console.WriteLine(i); }
+D. for each (int i in arr) { Console.WriteLine(i); }
+ANSWER: A
+
+what keyword is used to prevent a class from being inherited?
+A. static
+B. sealed
+C. private
+D. readonly
+ANSWER: B
+
+Which method can be used to remove white spaces from both ends of a string in C#?
+A. Trim()
+B. Strip()
+C. RemoveWhitespace()
+D. Clear()
+ANSWER: A
+
+Which of the following C# keywords is used to define an abstract class?
+A. abstract class
+B. interface
+C. virtual class
+D. base class
+ANSWER: A
+
+What is the output of the following code?
+csharp
+Copy code
+int a = 2, b = 3;
+Console.WriteLine(a == b ? "Equal" : "Not Equal");
+A. Equal
+B. Not Equal
+C. 2
+D. Compilation error
+ANSWER: B
+
+what is the purpose of an interface?
+A. To define a class blueprint without implementation
+B. To define an abstract class with implementation
+C. To define methods that can have default implementations
+D. To allow the use of static methods
+ANSWER: A
+
+Which of the following is true about readonly fields in C#?
+A. They can only be assigned a value at the time of declaration
+B. They can be modified at any time in the class constructor
+C. They can be modified after the constructor execution
+D. Both A and B are correct
+ANSWER: D
+
+Which C# keyword is used to inherit from a class?
+A. extends
+B. super
+C. implements
+D. :
+ANSWER: D
+
+Which of the following is an example of a method parameter passing style in C#?
+A. By reference
+B. By value
+C. By output
+D. All of the above
+ANSWER: D
+
+--- Processed by Backend ---
+Timestamp: 2024-12-19 02:24:44

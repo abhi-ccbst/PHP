@@ -42,7 +42,6 @@
         } else {
             echo "Ther was an error uploading your file.";
         }
-    
     }
 
 
