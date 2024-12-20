@@ -27,6 +27,10 @@ abstract class Car {
     abstract public function intro() : string;
 
     abstract public function driver($driverName) : string;
+
+    public function test() : int {
+        return 100;
+    }
 }
 
 class Audi extends Car {
@@ -58,10 +62,54 @@ class Volvo extends Car {
 $audi = new Audi("Rs4");
 echo $audi->intro() . "<br>";
 echo $audi->driver("Abhi") . "<br>";
+echo $audi->test() . "<br>";
 
 $volvo = new Volvo("123");
 echo $volvo->intro() . "<br>";
 echo $volvo->driver("Meet") . "<br>";
+echo $volvo->test() . "<br>";
+
+
+interface Animal {
+    public function makeSound() : string;
+}
+
+interface Mammals {
+    public function type() : string;
+}
+
+interface Fish {
+    public function lifeLine() : int;
+}
+
+class Cat implements Animal, Mammals {
+    public function makeSound() : string {
+        return "Meow";
+    }
+
+    public function type() : string {
+        return "CAT";
+    }
+}
+
+class Jawless implements Animal, Fish {
+    public function makeSound() : string {
+        return "startle";
+    }
+
+    public function lifeLine() : int {
+        return 10;
+    }
+}
+
+$cat = new Cat();
+echo $cat->makeSound() . "<br>";
+echo $cat->type() . "<br>";
+
+$jawLess = new Jawless();
+echo $jawLess->makeSound() . "<br>";
+echo $jawLess->lifeLine() . "<br>";
+
 ?>
 </body>
 </html>
