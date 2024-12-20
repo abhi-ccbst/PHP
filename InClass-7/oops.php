@@ -2,14 +2,18 @@
 <body>
     <?php 
     class Oops {
-        public $name;
+        private $name;
         public $color;
+
+
 
         function __construct($nameComing, $color) {
             $this->name = $nameComing;
             $this->color = $color;
         }
-
+        // function __destruct() {
+        //     echo "This Oops is $this->name";
+        // }
         // function __construct($nameComing) {
         //     $this->name = $nameComing;
         // }
@@ -30,8 +34,10 @@
     // $banana->set_name('Banana');
 
     echo $apple->get_name() . "<br>" . $banana->get_name() . "<br>";
-    echo $apple->get_color() . "<br>" . $banana->get_color();
-
+    echo $apple->get_color() . "<br>" . $banana->get_color() . "<br>";
+    echo $apple->name . "<br>" . $banana->name . "<br>";
+    echo $apple->color . "<br>" . $banana->color;
     ?>
 </body>
 </html>
+
