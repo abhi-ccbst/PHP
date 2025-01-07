@@ -94,3 +94,20 @@ SELECT COUNT(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
 SELECT SUM(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
 
 SELECT AVG(personID)  FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
+
+SELECT * FROM ccbst.Persons WHERE firstName LIKE '%a%';
+SELECT COUNT(personID) FROM ccbst.Persons WHERE firstName LIKE '%a';
+
+-- LIKE: 
+-- %: percentage, represents zero, one, or multiple characters
+-- _: underscore, represents one, single character
+
+-- 'abhi Patel'
+-- LIKE Operator	Description
+-- WHERE CustomerName LIKE 'abh%'	Finds any values that start with "a". = abhi patel
+-- WHERE CustomerName LIKE '%a'	Finds any values that end with "a". = NULL
+-- WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position = NULL
+-- WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position = null
+-- WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length = abhi patel
+-- WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length = abhi patel
+-- WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o" = null
