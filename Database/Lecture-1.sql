@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS ccbst.Persons;
 CREATE TABLE ccbst.Persons (
 	personID	int 	NOT NULL PRIMARY KEY,
     lastName	text, 
-    firstName	text	NOT NULL,
+    firstName	varchar(100)	NOT NULL UNIQUE,
     address		text,
     dobYear		int		DEFAULT 2000
 );
