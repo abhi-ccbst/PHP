@@ -1,4 +1,3 @@
-
 SET SQL_SAFE_UPDATES = 0;
 
 show databases;
@@ -89,4 +88,9 @@ SELECT personID AS MIN_PERSON_ID FROM ccbst.Persons ORDER BY personID LIMIT 1 OF
 SELECT MAX(personID) AS MAX_PERSON_ID FROM ccbst.Persons;
 
 SELECT personID AS MAX_PERSON_ID FROM ccbst.Persons ORDER BY personID DESC LIMIT 1 OFFSET 5;
+ 
+SELECT COUNT(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20; 
 
+SELECT SUM(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
+
+SELECT AVG(personID)  FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
