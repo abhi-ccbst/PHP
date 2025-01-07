@@ -12,10 +12,11 @@ SHOW TABLES;
 DROP TABLE IF EXISTS ccbst.Persons;
 
 CREATE TABLE ccbst.Persons (
-	personID	int,
+	personID	int 	NOT NULL PRIMARY KEY,
     lastName	text, 
-    firstName	text,
-    address		text
+    firstName	text	NOT NULL,
+    address		text,
+    dobYear		int		DEFAULT 2000
 );
 
 INSERT INTO ccbst.Persons (personID, lastName, firstName, address) 
@@ -23,6 +24,7 @@ VALUES (1, 'patel', 'Abhi', 'Canada'),
 (2, 'wick', 'John', 'Canada'),
 (3, 'lastName', 'firstName', NULL);
 
+SELECT * FROM ccbst.Persons;
 SELECT * FROM ccbst.Persons WHERE lastName = 'wick' AND personID = 2;
 
 SELECT * FROM ccbst.Persons WHERE lastName = 'wick' OR personID = 1;
@@ -42,3 +44,4 @@ UPDATE ccbst.Persons SET lastName = 'McCarty', firstName = 'Lilliana' WHERE pers
 DELETE FROM ccbst.Persons WHERE personID = 1;
 
 SELECT * FROM ccbst.Persons;
+
