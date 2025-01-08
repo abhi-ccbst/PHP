@@ -9,8 +9,11 @@ CREATE DATABASE ccbst;
 USE ccbst;
 SHOW TABLES;
 
+-- DROP TABLES 
 DROP TABLE IF EXISTS ccbst.Persons;
+DROP TABLE IF EXISTS ccbst.firstNames;
 
+-- CREATE TABLES 
 CREATE TABLE ccbst.Persons (
 	personID	int 	NOT NULL PRIMARY KEY,
     lastName	text, 
@@ -19,6 +22,11 @@ CREATE TABLE ccbst.Persons (
     dobYear		int		DEFAULT 2000
 );
 
+CREATE TABLE ccbst.firstNames (
+	firstName	varchar(100) PRIMARY KEY
+);
+
+INSERT INTO ccbst.firstNames (firstName) VALUES ('John'), ('Pennington'), ('McDaniel');
 
 INSERT INTO ccbst.Persons (personID, lastName, firstName, address) 
 VALUES (1, 'patel', 'Abhi', 'Canada'),
@@ -57,6 +65,7 @@ VALUES (1, 'patel', 'Abhi', 'Canada'),
 (34, 'Artemis', 'French', NULL),
 (35, 'Corey', 'Black', NULL);
 
+
 SELECT * FROM ccbst.Persons;
 SELECT personID, lastName from ccbst.Persons WHERE NOT lastName = 'wick' AND NOT personID = 1;
 SELECT * FROM ccbst.Persons WHERE lastName = 'wick' AND personID = 2;
@@ -93,11 +102,18 @@ SELECT COUNT(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
 
 SELECT SUM(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
 
-SELECT AVG(personID)  FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
+SELECT AVG(personID) FROM ccbst.Persons WHERE personID > 3 AND personID < 20;
 
 SELECT * FROM ccbst.Persons WHERE firstName LIKE '%a%';
 SELECT COUNT(personID) FROM ccbst.Persons WHERE firstName LIKE '%a';
 
+SELECT * FROM ccbst.Persons WHERE firstName = 'John' OR firstName = 'Pennington' OR firstName = 'McDaniel';
+
+SELECT * FROM ccbst.Persons WHERE firstName IN ('John', 'Pennington' ,'McDaniel');
+
+SELECT * FROM ccbst.Persons WHERE firstName IN (SELECT firstName FROM ccbst.firstNames);
+
+SELECT * FROM ccbst.Persons WHERE personID = (SELECT COUNT(firstName) from ccbst.firstNames);
 -- LIKE: 
 -- %: percentage, represents zero, one, or multiple characters
 -- _: underscore, represents one, single character
