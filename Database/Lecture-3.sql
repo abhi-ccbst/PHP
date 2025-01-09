@@ -102,6 +102,46 @@ SELECT orders.OrderID,
 FROM orders
 INNER JOIN customers On customers.CustomerID = orders.CustomerID;
 
+-- Left JOIN
+SELECT orders.OrderID, 
+	customers.CustomerID, 
+	customers.CustomerName,
+	customers.ContactName,
+	customers.City,
+	customers.Country
+FROM orders
+LEFT JOIN customers On customers.CustomerID = orders.CustomerID;
+
+-- Right JOIN
+SELECT orders.OrderID, 
+	customers.CustomerID, 
+	customers.CustomerName,
+	customers.ContactName,
+	customers.City,
+	customers.Country
+FROM orders
+RIGHT JOIN customers On customers.CustomerID = orders.CustomerID;
+
+-- FULL JOIN
+SELECT orders.OrderID, 
+	customers.CustomerID, 
+	customers.CustomerName,
+	customers.ContactName,
+	customers.City,
+	customers.Country
+FROM orders
+RIGHT JOIN customers On customers.CustomerID = orders.CustomerID
+
+UNION
+
+SELECT orders.OrderID, 
+	customers.CustomerID, 
+	customers.CustomerName,
+	customers.ContactName,
+	customers.City,
+	customers.Country
+FROM orders
+Left JOIN customers On customers.CustomerID = orders.CustomerID;
 
 
 
