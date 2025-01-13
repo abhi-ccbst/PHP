@@ -33,29 +33,55 @@ $sql = "
     );
     ";
 
-$sql .= "
-    INSERT INTO Customers VALUES 
-    (1, 'Alice', 'New York', 'USA'),
-    (2, 'Bob', 'Toronto', 'Canada'),
-    (3, 'Charlie', 'London', 'UK'),
-    (4, 'Diana', 'Sydney', 'Australia');
-    ";
 
-// SQL to create database
+
+    // SQL to create database
 if ($conn->multi_query($sql) === TRUE) {
+    while ($conn->next_result()) {
+        if ($result = $conn->store_result()) {
+            $result->free(); // Free any result set
+        }
+    }
     echo "Database and Table(Customers) created successfully<br>";
-
-    $last_id = $conn->insert_id;
-    echo "New records created successfully. <br>";
-    
 } else {
     echo "Error creating database: " . $conn->error;
 }
 
 
-// Close connection
-$conn->close();
+$stmt = $conn->prepare("INSERT INTO Customers (CustomerID, CustomerName, City, Country) VALUES (?, ?, ?, ?)");
 
+// i - integer
+// d - double
+// s - string
+// b - BLOB
+$stmt->bind_param("isss", $customerID, $customerName, $city, $country);
+$customerID = 1;
+$customerName = "Alice";
+$city = "New York";
+$country = "USA";
+$stmt->execute();
+
+$customerID = 2;
+$customerName = "Bob";
+$city = "Toronto";
+$country = "Canada";
+$stmt->execute();
+
+$customerID = 3;
+$customerName = "Charlie";
+$city = "London";
+$country = "UK";
+$stmt->execute();
+
+$customerID = 4;
+$customerName = "Diana";
+$city = "Sydney";
+$country = "Australia";
+$stmt->execute();
+
+// Clean up
+$stmt->close();
+$conn->close();
 ?>
 
 
